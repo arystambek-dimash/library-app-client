@@ -1,33 +1,25 @@
-import {React} from "react";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import logo from './logo.svg';
+import './App.css';
 
-import './index.css'
-import MainPage from "./pages/MainPage";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Login from "./pages/Login";
-import PageNotFound from "./pages/PageNotFound";
-import Auth from "./pages/Auth";
-import ForgotPassword from "./pages/ForgotPassword";
-import 'react-notifications/lib/notifications.css';
-
-const App = () => {
-    return (
-        <div>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Navbar/>}>
-                        <Route index element={<MainPage/>}/>
-                    </Route>
-                    <Route path="/auth" element={<Auth/>}/>
-                    <Route path='/login' element={<Login/>}/>
-                    <Route path="/forgot-password" element={<ForgotPassword/>}/>
-                    <Route path="*" element={<PageNotFound/>}/>
-                </Routes>
-            </BrowserRouter>
-
-        </div>
-    );
-};
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
 
 export default App;
