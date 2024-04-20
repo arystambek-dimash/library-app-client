@@ -19,7 +19,7 @@ function Login() {
 
     const handleClick = async (event) => {
         event.preventDefault();
-
+        'Hello'
         try {
             const response = await axios.post('api/users/token/', {
                 email: name,
